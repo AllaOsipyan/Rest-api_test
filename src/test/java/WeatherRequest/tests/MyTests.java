@@ -22,7 +22,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class MyTests extends BaseTest{
     @Test()
-    public void dataProperties(){
+    public void checkCityParam(){
         WeatherDataService weatherDataService = new WeatherDataService(properties);
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         df.setTimeZone(TimeZone.getTimeZone("Europe/London"));
