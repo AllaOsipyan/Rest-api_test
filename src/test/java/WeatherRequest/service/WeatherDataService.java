@@ -19,11 +19,11 @@ public class WeatherDataService extends BaseService{
         return new RequestBuilder(baseRequest());
     }
 
-    public ItemModel[] getDatasets(RequestSpecification requestSpecification){
+    public ItemModel getDatasets(RequestSpecification requestSpecification){
         return executeGetDatasets(requestSpecification)
                 .then()
                 .extract()
-                .body().as(ItemModel[].class);
+                .body().as(ItemModel.class);
     }
 
     public Response executeGetDatasets(RequestSpecification requestSpecification) {
